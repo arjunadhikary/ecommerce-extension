@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Save Money Honey",
+  "description": "This is a extension used to compare the price of a product with all other sites in Nepal",
+  "version": "0.0.1",
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": "images/shop-24.png"
+  },
+  "icons": {
+    "16": "images/shop-24.png",
+    "32": "images/shop-24.png",
+    "48": "images/shop-48.png",
+    "128": "images/shop-96.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["activeTab", "scripting", "storage"],
+
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": ["https://www.daraz.com.np/products/*"]
+    }
+  ],
+  "host_permissions": ["https://*/"]
+}

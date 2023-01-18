@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>All Product</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <h1>Save Money</h1>
+    <div class="promo">
+      <a class="outer-link" href="https://arjunadhikary.com.np/"
+        >Made By: <span id="by">Arjun Adhikari</span></a
+      >
+      <a class="outer-link last-el" href="https://codekavya.com">
+        Powered By <span>Codekavya </span></a
+      >
+    </div>
+    <div
+      id="loading"
+      style="
+        display: none;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 3px;
+      "
+    >
+      fetching data can take more than 10 seconds ...
+    </div>
+    <button id="get-data">Fetch Data</button>
+
+    <div id="product-list">
+      <div class="product">
+        <div class="product-name"></div>
+        <div class="product-price"></div>
+      </div>
+    </div>
+    <div id="product-error"></div>
+    <script src="popup.js"></script>
+  </body>
+</html>
